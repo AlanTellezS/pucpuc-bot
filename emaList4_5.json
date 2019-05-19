@@ -22,7 +22,7 @@
 		[ "0020 Ononoki Summer", "F", "Size Up", "Creates an Ononoki bomb that sizes up the pucs surrounding it.", "https://i.imgur.com/nFj4c6Y.png"],
 		[ "0021 Hachikuji Summer", "C", "Size Up, Passive", "When fever time activates sizes up targeted pucs.", "https://i.imgur.com/wztzoHR.png"],
 		[ "0022 Suruga Summer", "A", "Size Up", "Sizes up targeted pucs.", "https://i.imgur.com/aHKoXZh.png"],
-		[ "0023 Hitagi", "D", "Score Up", "Boosts the score of targeted pucs. Combine all targeted pucs for a big score!", "https://i.imgur.com/ADab6Xq.png"],
+		[ "0023 Hitagi", "S", "Score Up", "Boosts the score of targeted pucs. Combine all targeted pucs for a big score!", "https://i.imgur.com/ADab6Xq.png"],
 		[ "0024 Tsukihi", "B", "Size Up", "Sizes up 1 random puc.", "https://i.imgur.com/nvuQ94t.png"],
 		[ "0025 Hachikuji", "D", "Size Up", "Sizes up targeted pucs.", "https://i.imgur.com/qVtVVuv.png"],
 		[ "0026 Nadeko", "D", "Size Up", "Sizes up the lowest sized puc on your board.", "https://i.imgur.com/BBFAVtt.png"],
@@ -80,11 +80,11 @@
 		[ "0078 Easter Ougi", "F", "Unique", "Creates 3 eggs that pop at varying intervals ", "https://cdn.discordapp.com/attachments/492461461113667605/563675795596247040/scn_cardL_ev_minimap_07_0002-CAB-d9d103412ef0d379a6189877ded2efd4-10985582576019707007.png"],
 		[ "0079 Easter Hanekawas", "D", "Size up", "Sizes up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/563675796565262346/scn_cardL_ev_minimap_07_0003-CAB-455cd4d96024a4ae788a2018afde99fb-1587117766065846059.png"],
 		[ "0080 Madoka", "A", "Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/567998505373794324/IMG_20190417_050241.jpg"],
-		[ "0081 Homura", "A", "Refill Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/567998503519911946/IMG_20190417_050239.jpg"],
-		[ "0082 Sayaka", "S", "Leader Creation", "", "https://cdn.discordapp.com/attachments/492461461113667605/567998504111177749/IMG_20190417_050235.jpg"],
+		[ "0081 Homura", "A", "Refill Size Up", "While active, increase refill size and prevent leader pucs from spawning.", "https://cdn.discordapp.com/attachments/492461461113667605/567998503519911946/IMG_20190417_050239.jpg"],
+		[ "0082 Sayaka", "S", "Leader Creation", "Spawns leader pucs", "https://cdn.discordapp.com/attachments/492461461113667605/567998504111177749/IMG_20190417_050235.jpg"],
 		[ "0083 Kyubey", "D", "Board Clear Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/567922646180691969/image0.jpg"],
-		[ "0084 Madoka Girls", "C", "Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/567998504111177748/IMG_20190417_050246.jpg"],
-		[ "0085 Kyoko ", "B", "Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/567998504929329152/IMG_20190417_050237.jpg"],
+		[ "0084 Madoka Girls", "C", "Size Up", "Sizes up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/567998504111177748/IMG_20190417_050246.jpg"],
+		[ "0085 Kyoko ", "B", "Size Up", "For the duration, increase the size of any chain.", "https://cdn.discordapp.com/attachments/492461461113667605/567998504929329152/IMG_20190417_050237.jpg"],
 		[ "0086 Mami", "D", "Board Clear, Puc Change", "", "https://cdn.discordapp.com/attachments/492461461113667605/567998503524106241/IMG_20190417_050244.jpg"]
 	]
 }

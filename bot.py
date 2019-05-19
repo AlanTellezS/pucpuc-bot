@@ -129,7 +129,7 @@ async def on_message(message):
                 embed_msg = generic_embed(ema[0], ema[3], ema[4], "")
                 await channel.send(embed = embed_msg)
             else:
-                await channel.send(error_embed(error="Not in range"))
+                await channel.send(embed = error_embed(error="Not in range"))
         except ValueError:
             await channel.send(embed = error_embed(error = "Wrong format, %s is not a number" % find[1]))
     
