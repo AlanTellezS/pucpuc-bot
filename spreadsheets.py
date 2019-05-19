@@ -126,21 +126,23 @@ def updatePuc():
         print('No data found.')
     else:
         for i in range(0, l):
-            skill = values[i][1].split("\n")
-            skill = ", ".join(skill)
-            ema = values[i][12].split("\n")
-            ema = ",".join(ema)
-            f.write('\t\t[ ')
-            f.write('%d, ' % (i+1))
-            for j in range (0, len(values[i])):
-                if(j==1): f.write('"' + skill + '"')
-                elif(j==12): f.write('"' + ema + '"')
-                else: f.write('"%s"' % values[i][j])
-                if(j<len(values[i])-1): f.write(", ")
-            f.write("]")
-            if(i<l-1):
-                f.write(",")
-            f.write("\n")
+            if(len(values[i])<10): continue
+            else:
+                skill = values[i][1].split("\n")
+                skill = ", ".join(skill)
+                ema = values[i][12].split("\n")
+                ema = ",".join(ema)
+                f.write('\t\t[ ')
+                f.write('%d, ' % (i+1))
+                for j in range (0, len(values[i])):
+                    if(j==1): f.write('"' + skill + '"')
+                    elif(j==12): f.write('"' + ema + '"')
+                    else: f.write('"%s"' % values[i][j])
+                    if(j<len(values[i])-1): f.write(", ")
+                f.write("]")
+                if(i<l-1):
+                    f.write(",")
+                f.write("\n")
 
     f.write("\t]\n")
     f.write("}")
@@ -182,6 +184,7 @@ def updateSkills():
 
 if __name__ == "__main__":
     updateDB4_5()
-    f = open("emaList4_5.json")
-    j = json.load(f)
+    updateDB1_3()
+    updateSkills()
+    updatePuc()
 
