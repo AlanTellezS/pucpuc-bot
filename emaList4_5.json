@@ -85,6 +85,15 @@
 		[ "0083 Kyubey", "D", "Board Clear Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/567922646180691969/image0.jpg"],
 		[ "0084 Madoka Girls", "C", "Size Up", "Sizes up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/567998504111177748/IMG_20190417_050246.jpg"],
 		[ "0085 Kyoko ", "B", "Size Up", "For the duration, increase the size of any chain.", "https://cdn.discordapp.com/attachments/492461461113667605/567998504929329152/IMG_20190417_050237.jpg"],
-		[ "0086 Mami", "D", "Board Clear, Puc Change", "", "https://cdn.discordapp.com/attachments/492461461113667605/567998503524106241/IMG_20190417_050244.jpg"]
+		[ "0086 Mami", "D", "Board Clear, Puc Change", "", "https://cdn.discordapp.com/attachments/492461461113667605/567998503524106241/IMG_20190417_050244.jpg"],
+		[ "0087 Lavender Shinobu", "SS", "Size Up, Puc Change", "Converts the pucs in an area around the center to hats with a high score, and sizes them up.", "https://cdn.discordapp.com/attachments/492461461113667605/571291230340644872/scn_cardL_ev_minimap_08_0001-CAB-bea6caa6de82c8501dae0335860c5f5a-14673249746836612566.png"],
+		[ "0088 Bath Kaiki", "A", "Combo Counter, Passive", "Each time a puc at or above the size needed pops the combo meter gets an additional boost.", "https://cdn.discordapp.com/attachments/492461461113667605/571291227006435330/scn_cardL_ev_minimap_08_0002-CAB-c47802bfcab71bbaa67111d9132d9d0c-5200184773070741828.png"],
+		[ "0089 Suruga and Ononoki Travel", "F", "Size Up", "Size up a specified number of random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/571291234384084992/scn_cardL_ev_minimap_08_0003-CAB-2cfe3f9d9b46dd9ba3273d48d59d2c5d-9241291317302720207.png"],
+		[ "0090 Anniversary Fire Sisters", "", "Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/578835304681701386/IMG_20190517_024425.jpg"],
+		[ "0091 Anniversary Shinobu", "", "Size Up, Passive", "", "https://cdn.discordapp.com/attachments/492461461113667605/578835337309192192/IMG_20190517_024428.jpg"],
+		[ "0092 Anniversary Ougi & Sodachi", "", "Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/578835323191296000/IMG_20190517_024426.jpg"],
+		[ "0093 Anniversary Ononoki", "", "Size Up, Puc Change", "", "https://cdn.discordapp.com/attachments/492461461113667605/578835283412254721/IMG_20190517_024424.jpg"],
+		[ "0094 Anniversary Koyomi Meme & Kaiki", "", "Quick Pop, Quick Chain, Range Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/578835364828151811/IMG_20190517_024433.jpg"],
+		[ "0095 Anniversary Bake Girls", "", "Size Up", "", "https://cdn.discordapp.com/attachments/492461461113667605/578835348822687744/IMG_20190517_024431.jpg"]
 	]
 }
