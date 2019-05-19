@@ -30,7 +30,7 @@ commands = [
     ["skill", 'Shows the description of the skill with that letter\n\tExample: $skill A', ""]
 ]
 
-server_default_thumbnail = "https://cdn.discordapp.com/attachments/492461461113667605/568033372543385611/cha_block_madoka01_v01-CAB-c50120ac711700ee630d6512935a44fe-1479165618584560336.png"
+server_default_thumbnail = "https://cdn.discordapp.com/attachments/492461461113667605/578852421850103808/cha_block_hitagi10_v00-CAB-0dd15402dba36e858d1c78ca4612be43-18092607799226408199.png"
 
 permited_ema_stars = ['1','2','3','4','5','ANY']
 permited_ema_skill = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','ANY']
