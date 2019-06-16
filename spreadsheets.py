@@ -184,5 +184,7 @@ def updateSkills():
     f.close()
 
 if __name__ == "__main__":
-    updateSkills()
+    updateDB1_3()
+    updateDB4_5()
+    updatePuc()
 

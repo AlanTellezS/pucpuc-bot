@@ -46,6 +46,17 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    """
+    user = message.author
+    server = message.guild
+
+    roles = []
+    for rol in user.roles:
+        roles.append(rol.id)
+    if 589331304445902858 not in roles:
+        await user.add_roles(server.get_role(589331304445902858))
+    """
+
     # gets the channel where the message was writen
     channel = message.channel
 
