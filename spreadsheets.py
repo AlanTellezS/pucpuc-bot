@@ -28,6 +28,51 @@ puc = "'Puc Skills'!B2:S88"
 
 skills = "'1-3 Star Ema Guide'!A3:C30"
 
+strats = "'Ema Combos'!C4:L"
+
+def updateStrats():
+    store = file.Storage('token.json')
+    creds = store.get()
+    if not creds or creds.invalid:
+        flow = client.flow_from_clientsecrets('credentials.json', SCOPES)
+        creds = tools.run_flow(flow, store)
+    service = build('sheets', 'v4', http=creds.authorize(Http()))
+
+    # Call the Sheets API
+    sheet = service.spreadsheets()
+
+    f = open("strats.json", "w")
+
+    f.write("{\n")
+    f.write('\t"data" : [\n')
+
+    result = sheet.values().get(spreadsheetId=spreadsheet,
+                                range=strats).execute()
+    values = result.get('values', [])
+    l = len(values)
+
+    if not values:
+        print('No data found.')
+    else:
+        for i in range(0, l):
+            if len(values[i]) == 0:
+                continue
+            f.write('\t\t[')
+            for j in range(0,len(values[i])):
+                if (values[i][j] != ''):
+                    f.write('"%s"' % values[i][j])
+                    if (j<len(values[i])-1):
+                        f.write(",")
+            f.write("]")
+            if(i<l-1):
+                f.write(",")
+            
+            f.write("\n")
+            
+    f.write("\t]\n")
+    f.write("}")
+    f.close()
+
 def updateDB1_3():
     store = file.Storage('token.json')
     creds = store.get()
@@ -184,6 +229,6 @@ def updateSkills():
     f.close()
 
 if __name__ == "__main__":
+    updateStrats()
     updateDB4_5()
-    updatePuc()
 

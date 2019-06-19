@@ -28,7 +28,7 @@ commands = [
     ["sse", 'Search 4-5 ema by skill\t\nExample: $searchSkillEma Size_Up', "Search ema skill"],
     ["ssp", 'Search pucs by skill\t\nExample: $searchSkillPuc Board_skill', "Search puc skill"],
     ["skill", 'Shows the description of the skill with that letter\n\tExample: $skill A', ""],
-    ["estrat, 'Shows a strat", ""]
+    ["strat, 'Shows a strat", ""]
 ]
 
 server_default_thumbnail = "https://cdn.discordapp.com/attachments/492461461113667605/588696373205925925/cha_block_yotsugi05_v01-CAB-77324350eb109a539abaa89e02cb0576-14837714272648993982.png"
@@ -246,6 +246,25 @@ async def on_message(message):
             else:
                 embed_msg = generic_embed("Skill description", msg, "", server_default_thumbnail)
         await channel.send(embed=embed_msg)
+    
+    # $strat
+    elif message.content.startswith("$strat"):
+        strats = loadStrats()
+        find = message.content.split(" ")
+        find = find[1].split("_")
+        find = " ".join(find)
+        find = find.upper()
+        msg = ''
+        for s in strats['data']:
+            if s[1].upper() == find:
+                for i in s:
+                    if i.startswith("http"):
+                        await channel.send(embed = generic_embed("", "", i, ""))
+                    elif i.upper() == find:
+                        continue
+                    else:
+                        msg = msg + i + "\n"
+                await channel.send(embed = generic_embed("", msg, "", server_default_thumbnail))
 
 @client.event
 async def on_ready():
@@ -276,6 +295,11 @@ def loadPucs():
 
 def loadSkills():
     f = open("skills.json")
+    jfile = json.load(f)
+    return jfile
+
+def loadStrats():
+    f = open("strats.json")
     jfile = json.load(f)
     return jfile
 
