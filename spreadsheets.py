@@ -22,7 +22,7 @@ info = [
     ["'1-3 Star Ema List'!AT3:AW", "Zaregoto"]
 ]
 
-ema4_5 = "'4-5 Star Ema Skills'!B2:O102"
+ema4_5 = "'4-5 Star Ema Skills'!B2:P102"
 
 puc = "'Puc Skills'!B2:S88"
 
@@ -93,7 +93,7 @@ def updateDB4_5():
         for i in range(0, l):
             skill = values[i][2].split("\n")
             skill = ", ".join(skill)
-            f.write('\t\t[ "%s", "%s", "%s", "%s", "%s"]' % (values[i][0], values[i][1], skill, values[i][10], values[i][13]))
+            f.write('\t\t[ "%s", "%s", "%s", "%s", "%s"]' % (values[i][0], values[i][1], skill, values[i][10], values[i][14]))
             if(i<l-1):
                 f.write(",")
             f.write("\n")
