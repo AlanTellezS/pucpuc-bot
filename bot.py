@@ -28,7 +28,7 @@ commands = [
     ["sse", 'Search 4-5 ema by skill\t\nExample: $searchSkillEma Size_Up', "Search ema skill"],
     ["ssp", 'Search pucs by skill\t\nExample: $searchSkillPuc Board_skill', "Search puc skill"],
     ["skill", 'Shows the description of the skill with that letter\n\tExample: $skill A', ""],
-    ["strat, 'Shows a strat", ""]
+    ["strat", 'Shows a strat', ""]
 ]
 
 server_default_thumbnail = "https://cdn.discordapp.com/attachments/492461461113667605/588696373205925925/cha_block_yotsugi05_v01-CAB-77324350eb109a539abaa89e02cb0576-14837714272648993982.png"
@@ -62,6 +62,7 @@ async def on_message(message):
     channel = message.channel
 
     if message.content.startswith('$commands'):
+        print (commands)
         msg = ''
         for command in commands:
             msg = msg  + '$' + command[0]
@@ -161,7 +162,7 @@ async def on_message(message):
             ["Ema 1", ema['data'][num_ema1][0], True],
             ["Ema 2", ema['data'][num_ema2][0], True]
         ]
-        embed_msg = field_embed("Setup", "", fields, pucs['data'][num_puc][17], server_default_thumbnail)
+        embed_msg = field_embed("Setup", "", fields, pucs['data'][num_puc][18], server_default_thumbnail)
         await channel.send(embed=embed_msg)
 
     # $searchNamePuc
