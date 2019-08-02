@@ -22,9 +22,9 @@ info = [
     ["'1-3 Star Ema List'!AT3:AW", "Zaregoto"]
 ]
 
-ema4_5 = "'4-5 Star Ema Skills'!B2:P102"
+ema4_5 = "'4-5 Star Ema Skills'!B2:P111"
 
-puc = "'Puc Skills'!B2:S88"
+puc = "'Puc Skills'!B2:T98"
 
 skills = "'1-3 Star Ema Guide'!A3:C30"
 
@@ -176,13 +176,10 @@ def updatePuc():
             else:
                 skill = values[i][1].split("\n")
                 skill = ", ".join(skill)
-                ema = values[i][12].split("\n")
-                ema = ",".join(ema)
                 f.write('\t\t[ ')
                 f.write('%d, ' % (i+1))
                 for j in range (0, len(values[i])):
                     if(j==1): f.write('"' + skill + '"')
-                    elif(j==12): f.write('"' + ema + '"')
                     else: f.write('"%s"' % values[i][j])
                     if(j<len(values[i])-1): f.write(", ")
                 f.write("]")
@@ -229,6 +226,7 @@ def updateSkills():
     f.close()
 
 if __name__ == "__main__":
-    updateStrats()
     updateDB4_5()
+    updateDB1_3()
+    updatePuc()
 

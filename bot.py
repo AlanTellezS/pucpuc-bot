@@ -62,7 +62,6 @@ async def on_message(message):
     channel = message.channel
 
     if message.content.startswith('$commands'):
-        print (commands)
         msg = ''
         for command in commands:
             msg = msg  + '$' + command[0]
@@ -162,7 +161,7 @@ async def on_message(message):
             ["Ema 1", ema['data'][num_ema1][0], True],
             ["Ema 2", ema['data'][num_ema2][0], True]
         ]
-        embed_msg = field_embed("Setup", "", fields, pucs['data'][num_puc][18], server_default_thumbnail)
+        embed_msg = field_embed("Setup", "", fields, pucs['data'][num_puc][20], server_default_thumbnail)
         await channel.send(embed=embed_msg)
 
     # $searchNamePuc
@@ -198,7 +197,9 @@ async def on_message(message):
                         ["Rank 5", puc[9], True],
                         ["Rank 6", puc[10], True],
                         ["Rank 7", puc[11], True],
-                        ["Score at 100", puc[12], False]
+                        ["Rank 8", puc[12], True],
+                        ["Score at 100", puc[13], False],
+                        ["Score at 120", puc[14], False]
                     ]
                     embed_msg = field_embed(puc[1], puc[len(puc)-2], field, puc[len(puc)-1], server_default_thumbnail)
             except ValueError:
