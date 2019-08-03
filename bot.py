@@ -310,4 +310,4 @@ def commandF(num, space=True):
     else : return "$" + commands[num][0]
 
 #client.run(os.getenv('TOKEN'))
-client.run("NjA3MjM5ODM3MjY2ODcwMzQ0.XUWuew.XmbuCTiQujL_DUCqR2NPbBFCONI")
+client.run("NjA3MjM5ODM3MjY2ODcwMzQ0.XUWwLg.gy0gVKjrEzJMxztWruB73oyE5gI")
