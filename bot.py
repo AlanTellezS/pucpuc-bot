@@ -309,5 +309,5 @@ def commandF(num, space=True):
     if space == True : return "$" + commands[num][0] + " "
     else : return "$" + commands[num][0]
 
-#client.run(os.getenv('TOKEN'))
-client.run("NjA3MjM5ODM3MjY2ODcwMzQ0.XUWxNQ.Bgs7mt0peRYxtNwd41IP0RVY3vA")
+client.run(os.getenv('TOKEN'))
+#client.run("NjA3MjM5ODM3MjY2ODcwMzQ0.XUWxNQ.Bgs7mt0peRYxtNwd41IP0RVY3vA")
