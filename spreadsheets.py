@@ -22,9 +22,9 @@ info = [
     ["'1-3 Star Ema List'!AT3:AW", "Zaregoto"]
 ]
 
-ema4_5 = "'4-5 Star Ema Skills'!B2:P111"
+ema4_5 = "'4-5 Star Ema Skills'!B2:P117"
 
-puc = "'Puc Skills'!B2:T98"
+puc = "'Puc Skills'!B2:T110"
 
 skills = "'1-3 Star Ema Guide'!A3:C30"
 

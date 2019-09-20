@@ -109,6 +109,12 @@
 		[ "0107 Matsuri Fire Sisters", "D", "Size Up", "Sizes up random pucs.", "https://cdn.discordapp.com/attachments/585847890652692481/600907997924818945/107G_SF.png"],
 		[ "0108 Swimsuit Ononoki", "C", "Board Clear", "Erases a vertical line of pucs with a score multiplier", "https://cdn.discordapp.com/attachments/492461461113667605/605837279117967381/IMG_20190731_050040.jpg"],
 		[ "0109 Swimsuit Sodachi", "A", "Leader Puc Creation", "For 7 seconds, increased chance of leader puc spawning", "https://cdn.discordapp.com/attachments/492461461113667605/605837279868616887/IMG_20190731_050045.jpg"],
-		[ "0110 Swimsuit Hitagi & Nadeko & Hanekawa", "D", "Size Up", "Sizes up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/605837278463393803/IMG_20190731_050050.jpg"]
+		[ "0110 Swimsuit Hitagi & Nadeko & Hanekawa", "D", "Size Up", "Sizes up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/605837278463393803/IMG_20190731_050050.jpg"],
+		[ "0111 Swimsuit B.Hanekawa", "B", "Size Up                    Board Clear", "Clear pucs near the center of the board, and size up other random pucs", "https://cdn.discordapp.com/attachments/492461461113667605/611264061560061985/Swimsuit_Kuroneko.png"],
+		[ "0112 Swimsuit Ougi", "C", "Size Up", "Sizes up the smallest pucs, to a maximum of X pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/611263998918262804/Swimsuit_Ougi.png"],
+		[ "0113 Swimsuit Hachikuji & Shinobu & Suruga", "D", "Size Up", "Sizes up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/611165933679017985/IMG_20190814_215459.jpg"],
+		[ "0114 Alter Saber", "", "Board Clear, Puc Creation", "Erase pucs on a vertical line (with a multiplier) and spawn pucs at a large size", "https://cdn.discordapp.com/attachments/492461461113667605/617005262972387348/EDOZb8fUwAE9tqB.jpg"],
+		[ "0115 Rider", "", "Quick Pop, Quick Chain, Range Up", "For the specified time, increase linking range, speed up chaining animation, and speed up popping animation", "https://cdn.discordapp.com/attachments/492461461113667605/617005265023139929/EDOZc4gVUAAksUb.jpg"],
+		[ "0116 Fate Characters", "D", "Size Up", "Size up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/617005269272100886/EDOZeMOU0AIGgYq.jpg"]
 	]
 }
