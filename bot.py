@@ -40,11 +40,11 @@ permited_ema_stars = ['1','2','3','4','5','ANY']
 permited_ema_skill = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','ANY']
 
 db = dict()
-db['user'] = 'tDzQ4NkThJ'
-db['dbName']= 'tDzQ4NkThJ'
-db['password'] = "Q8DiVw01km"
-db['host']="remotemysql.com"
-db['port'] = '3306'
+db['user'] = os.getenv("db_user")
+db['dbName']= os.getenv("db_name")
+db['password'] = os.getenv("db_pass")
+db['host']= os.getenv("db_host")
+db['port'] = os.getenv("db_port")
 
 emaList = dict()
 emaList4_5 = []
