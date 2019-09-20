@@ -3,6 +3,7 @@ import discord
 import json
 import os
 import random
+import mysql.connector as mysql
 from common_embed import *
 
 client = discord.Client()
@@ -28,13 +29,22 @@ commands = [
     ["sse", 'Search 4-5 ema by skill\t\nExample: $searchSkillEma Size_Up', "Search ema skill"],
     ["ssp", 'Search pucs by skill\t\nExample: $searchSkillPuc Board_skill', "Search puc skill"],
     ["skill", 'Shows the description of the skill with that letter\n\tExample: $skill A', ""],
-    ["strat", 'Shows a strat', ""]
+    ["strat", 'Shows a strat', ""],
+    ["idSet", 'Set your friend id', ""],
+    ["id", 'Display your or someone else friend id', ""]
 ]
 
-server_default_thumbnail = "https://cdn.discordapp.com/attachments/492461461113667605/588696373205925925/cha_block_yotsugi05_v01-CAB-77324350eb109a539abaa89e02cb0576-14837714272648993982.png"
+server_default_thumbnail = "https://media.discordapp.net/attachments/492461461113667605/623459104706396160/cha_block_ougi05_v00-CAB-0672f337fe1115b2d61b5a4599fa91ed-4837252970573850542.png"
 
 permited_ema_stars = ['1','2','3','4','5','ANY']
 permited_ema_skill = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','ANY']
+
+db = dict()
+db['user'] = 'tDzQ4NkThJ'
+db['dbName']= 'tDzQ4NkThJ'
+db['password'] = "Q8DiVw01km"
+db['host']="remotemysql.com"
+db['port'] = '3306'
 
 emaList = dict()
 emaList4_5 = []
@@ -267,6 +277,40 @@ async def on_message(message):
                     else:
                         msg = msg + i + "\n"
                 await channel.send(embed = generic_embed("", msg, "", server_default_thumbnail))
+    # $idSet
+    elif message.content.startswith("$setID"):
+        find = message.content.split(" ")
+        if (len(find)==2):
+            friendID = find[1]
+            userID = message.author.id
+            con = mysql.connect(user = db['user'], password = db['password'], host = db['host'], database = db['dbName'], port = db['port'])
+            query = '''INSERT INTO users(DiscordID, GameID)
+                VALUES (
+                    "''' + str(userID) + '''",
+                    "''' + friendID + '''"
+                ) ON DUPLICATE KEY UPDATE
+                    DiscordID = "''' + str(userID) + '''",
+                    GameID = "''' + friendID + '''"'''
+            cursor = con.cursor()
+            cursor.execute(query)
+            con.commit()
+            con.close()
+
+    # id
+    elif message.content.startswith('$id'):
+        if (len(message.mentions) == 1):
+            mentionedUserID = message.mentions[0]
+        else:
+            mentionedUserID = message.author
+        con = mysql.connect(user = db['user'], password = db['password'], host = db['host'], database = db['dbName'], port = db['port'])
+        cursor = con.cursor()
+        query = 'select * from users where DiscordID = "' + str(mentionedUserID.id) + '"'
+        cursor.execute(query)
+        result = cursor.fetchall()
+        if (len(result)==0):
+            await channel.send(embed = generic_embed(mentionedUserID.display_name, "Id not registered","",server_default_thumbnail))
+        else:
+            await channel.send(embed = generic_embed(mentionedUserID.display_name, "ID:"+result[0][1],"",server_default_thumbnail))
 
 @client.event
 async def on_ready():
