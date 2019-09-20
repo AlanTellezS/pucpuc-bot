@@ -30,7 +30,7 @@ commands = [
     ["ssp", 'Search pucs by skill\t\nExample: $searchSkillPuc Board_skill', "Search puc skill"],
     ["skill", 'Shows the description of the skill with that letter\n\tExample: $skill A', ""],
     ["strat", 'Shows a strat', ""],
-    ["idSet", 'Set your friend id', ""],
+    ["setID", 'Set your friend id', ""],
     ["id", 'Display your or someone else friend id', ""]
 ]
 
@@ -295,6 +295,7 @@ async def on_message(message):
             cursor.execute(query)
             con.commit()
             con.close()
+            await channel.send(embed = generic_embed("Succesful", "Friend ID set","", server_default_thumbnail))
 
     # id
     elif message.content.startswith('$id'):
