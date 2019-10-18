@@ -113,8 +113,17 @@
 		[ "0111 Swimsuit B.Hanekawa", "B", "Size Up                    Board Clear", "Clear pucs near the center of the board, and size up other random pucs", "https://cdn.discordapp.com/attachments/492461461113667605/611264061560061985/Swimsuit_Kuroneko.png"],
 		[ "0112 Swimsuit Ougi", "C", "Size Up", "Sizes up the smallest pucs, to a maximum of X pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/611263998918262804/Swimsuit_Ougi.png"],
 		[ "0113 Swimsuit Hachikuji & Shinobu & Suruga", "D", "Size Up", "Sizes up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/611165933679017985/IMG_20190814_215459.jpg"],
-		[ "0114 Alter Saber", "", "Board Clear, Puc Creation", "Erase pucs on a vertical line (with a multiplier) and spawn pucs at a large size", "https://cdn.discordapp.com/attachments/492461461113667605/617005262972387348/EDOZb8fUwAE9tqB.jpg"],
-		[ "0115 Rider", "", "Quick Pop, Quick Chain, Range Up", "For the specified time, increase linking range, speed up chaining animation, and speed up popping animation", "https://cdn.discordapp.com/attachments/492461461113667605/617005265023139929/EDOZc4gVUAAksUb.jpg"],
-		[ "0116 Fate Characters", "D", "Size Up", "Size up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/617005269272100886/EDOZeMOU0AIGgYq.jpg"]
+		[ "0114 Alter Saber", "C", "Board Clear, Puc Creation", "Erase pucs on a vertical line (with a multiplier) and spawn pucs at a large size", "https://cdn.discordapp.com/attachments/492461461113667605/617005262972387348/EDOZb8fUwAE9tqB.jpg"],
+		[ "0115 Rider", "A", "Quick Pop, Quick Chain, Range Up", "For the specified time, increase linking range, speed up chaining animation, and speed up popping animation", "https://cdn.discordapp.com/attachments/492461461113667605/617005265023139929/EDOZc4gVUAAksUb.jpg"],
+		[ "0116 Fate Characters", "D", "Size Up", "Size up random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/617005269272100886/EDOZeMOU0AIGgYq.jpg"],
+		[ "0117 Hachikuji Cheerleader ", "S", "", "Changes pucs near the center to the specified size.", "https://cdn.discordapp.com/attachments/492461461113667605/623446777411928064/scn_cardL_ev_minimap_12_0001-CAB-f4d68aaf42723c1d42a4cbceefd41e21-14564563373564449124.png"],
+		[ "0118 Suruga Cheerleader", "C", "", "Size up pucs in the specified size range.", "https://cdn.discordapp.com/attachments/492461461113667605/623446789550374922/scn_cardL_ev_minimap_12_0002-CAB-29da77bdbbe5e6eef61503459818a1db-17173068678972625499.png"],
+		[ "0119 Karen and Sodachi Cheerleader", "D", "", "Size up random pucs.", "https://cdn.discordapp.com/attachments/585847890652692481/631176433829543936/059CG.png"],
+		[ "0120 Recon Ononoki", "C", "", "Size up 20 random pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/628156253163487232/scn_cardL_ev_minimap_13_0001-CAB-70ed3b05a7334e483bf7ec7d0326475c-13842645605810494014.png"],
+		[ "0121 People-Watching Kaiki", "B", "", "For 6 seconds, less size is needed to pop pucs.", "https://cdn.discordapp.com/attachments/492461461113667605/628156256548421642/scn_cardL_ev_minimap_13_0002-CAB-3f6f2892560ebbdef3a21bda6fab5b42-14166342957007033193.png"],
+		[ "0122 Theme Park Suruga & Karen", "D", "", "Size up random pucs.", "https://cdn.discordapp.com/attachments/585847890652692481/631177779345358869/062TP.png"],
+		[ "0123 Shinobu MiCard", "D", "", "Size up random pucs.", "https://cdn.discordapp.com/attachments/585847890652692481/631177797540380692/Micard.png"],
+		[ "0124 Halloween Sodachi", "", "Refill Size Up", "Increases refill size for a given length of time.", "https://cdn.discordapp.com/attachments/492461461113667605/634309567743787008/EHERQ7-VAAE3rPk.jpg"],
+		[ "0125 Halloween Meme", "", "Puc Creation ", "Spawns large pucs. ", "https://cdn.discordapp.com/attachments/492461461113667605/634309566808719361/EHERReIUwAA6Hcg.jpg"]
 	]
 }
