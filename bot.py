@@ -171,7 +171,7 @@ async def on_message(message):
             ["Ema 1", ema['data'][num_ema1][0], True],
             ["Ema 2", ema['data'][num_ema2][0], True]
         ]
-        embed_msg = field_embed("Setup", "", fields, pucs['data'][num_puc][20], server_default_thumbnail)
+        embed_msg = field_embed("Setup", "", fields, pucs['data'][num_puc][19], server_default_thumbnail)
         await channel.send(embed=embed_msg)
 
     # $searchNamePuc
