@@ -339,7 +339,7 @@ async def on_message(message):
 
     elif message.content.startswith("$randEma"):
         emaList4_5 = loadEmaList4_5()
-        num = int(find[1])-1
+        num = random.randint(0, len(emaList4_5['data']))
         ema = emaList4_5["data"][num]
         embed_msg = generic_embed(ema[0], ema[3], ema[4], "")
         await channel.send(embed = embed_msg)
