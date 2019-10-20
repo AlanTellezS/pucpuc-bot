@@ -31,7 +31,9 @@ commands = [
     ["skill", 'Shows the description of the skill with that letter\n\tExample: $skill A', ""],
     ["strat", 'Shows a strat', ""],
     ["setID", 'Set your friend id', ""],
-    ["id", 'Display your or someone else friend id', ""]
+    ["id", 'Display your or someone else friend id', ""],
+    ["randPuc", 'Shows a random puc', ""],
+    ["randEma", 'Shows a random ema', ""]
 ]
 
 server_default_thumbnail = "https://media.discordapp.net/attachments/492461461113667605/623459104706396160/cha_block_ougi05_v00-CAB-0672f337fe1115b2d61b5a4599fa91ed-4837252970573850542.png"
@@ -312,6 +314,35 @@ async def on_message(message):
             await channel.send(embed = generic_embed(mentionedUserID.display_name, "Id not registered","",server_default_thumbnail))
         else:
             await channel.send(embed = generic_embed(mentionedUserID.display_name, "ID:"+result[0][1],"",server_default_thumbnail))
+
+    # $randPuc
+    elif message.content.startswith("$randPuc"):
+        pucs = loadPucs()
+        num = random.randint(0, len(pucs['data']))
+        puc = pucs['data'][num]
+        field = [
+            ["Viability:", puc[3] + "/"+ puc[4], False],
+            ["Rank 1", puc[5], True],
+            ["Rank 2", puc[6], True],
+            ["Rank 3", puc[7], True],
+            ["Rank 4", puc[8], True],
+            ["Rank 5", puc[9], True],
+            ["Rank 6", puc[10], True],
+            ["Rank 7", puc[11], True],
+            ["Rank 8", puc[12], True],
+            ["Score at 100", puc[13], False],
+            ["Score at 120", puc[14], False]
+        ]
+        embed_msg = field_embed(puc[1], puc[len(puc)-2], field, puc[len(puc)-1], server_default_thumbnail)
+        await channel.send(embed=embed_msg)
+    # $randEma
+
+    elif message.content.startswith("$randEma"):
+        emaList4_5 = loadEmaList4_5()
+        num = int(find[1])-1
+        ema = emaList4_5["data"][num]
+        embed_msg = generic_embed(ema[0], ema[3], ema[4], "")
+        await channel.send(embed = embed_msg)
 
 @client.event
 async def on_ready():
