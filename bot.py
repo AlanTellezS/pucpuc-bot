@@ -134,7 +134,7 @@ async def on_message(message):
         else:
             for ema in emaList4_5["data"]:
                 if( find[1] in ema[0] ):
-                    ema_found = ema
+                    ema_found.append(ema)
             if (len(ema_found)>1):
                 for ema in ema_found:
                     msg = msg + "\t%s - %s\n" % (ema[0], ema[2])
