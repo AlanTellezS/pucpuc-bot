@@ -179,14 +179,36 @@ async def on_message(message):
     # $searchNamePuc
     elif message.content.startswith(commandF(5)):
         pucs = loadPucs()
+        pucs_found = []
         msg = ""
         find = message.content.split(" ")
         if (len(find)!=2): embed_msg = error_embed(error="Wrong format")
         else:
             for puc in pucs['data']:
-                if find[1] in puc[1]: 
+                if find[1] in puc[1]:
+                    pucs_found.append(puc)
+            if(len(pucs_found)>1):
+                for puc in pucs_found:
                     msg = msg + "\n" + str(puc[0]) + " " + puc[1]
-            embed_msg = generic_embed("Pucs found", msg, "", server_default_thumbnail)
+                embed_msg = generic_embed("Pucs found", msg, "", server_default_thumbnail)
+            elif(len(pucs_found)==1):
+                puc = pucs_found[0]
+                field = [
+                    ["Viability:", puc[3] + "/"+ puc[4], False],
+                    ["Rank 1", puc[5], True],
+                    ["Rank 2", puc[6], True],
+                    ["Rank 3", puc[7], True],
+                    ["Rank 4", puc[8], True],
+                    ["Rank 5", puc[9], True],
+                    ["Rank 6", puc[10], True],
+                    ["Rank 7", puc[11], True],
+                    ["Rank 8", puc[12], True],
+                    ["Score at 100", puc[13], False],
+                    ["Score at 120", puc[14], False]
+                ]
+                embed_msg = field_embed(puc[1], puc[len(puc)-2], field, puc[len(puc)-1], server_default_thumbnail)
+            else:
+                embed_msg = generic_embed("Puc not found", "No puc found with that name", "", server_default_thumbnail)
         await channel.send(embed=embed_msg)
 
     # $puc
@@ -297,7 +319,7 @@ async def on_message(message):
             cursor.execute(query)
             con.commit()
             con.close()
-            await channel.send(embed = generic_embed("Succesful", "Friend ID set","", server_default_thumbnail))
+            await channel.send(embed = generic_embed("Successful", "Friend ID set","", server_default_thumbnail))
 
     # id
     elif message.content.startswith('$id'):
