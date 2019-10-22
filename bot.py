@@ -181,8 +181,7 @@ async def on_message(message):
         pucs = loadPucs()
         pucs_found = []
         msg = ""
-        find = message.content.split(" ")
-        find[1] = find[1].replace('"', '')
+        find = message.content.split("-")
         if (len(find)!=2): embed_msg = error_embed(error="Wrong format")
         else:
             for puc in pucs['data']:
