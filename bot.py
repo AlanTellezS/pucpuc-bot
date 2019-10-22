@@ -143,7 +143,7 @@ async def on_message(message):
                 ema = ema_found[0]
                 embed_msg = generic_embed(ema[0], ema[3], ema[4], "")
             else:
-                embed_msg = error_embed("No puc found with that name")
+                embed_msg = error_embed("No ema found with that name")
         await channel.send(embed = embed_msg)
     
     # $ema
