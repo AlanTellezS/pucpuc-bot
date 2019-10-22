@@ -21,10 +21,10 @@ info = [
 commands = [
     ["help", "Info about a command.\n\tExample: $help ema", ""],
     ["se", "Search through the 1-3 ema list by star and skill, you can also use 'any' as a parameter.\n\tExample: $searchEma 1;J", "Search 1-3 ema"],
-    ["sne", "Search through the 4-5 ema list by name \nExample: $searchCharEma Araragi", "Search 4-5 ema"],
+    ["sne", "Search through the 4-5 ema list by name \nExample: $sne -Araragi", "Search 4-5 ema"],
     ["ema", "Get the description of a 4-5 ema by using its number on the doc (You can use searchCharEma to know that number)\nExample: $ema 10", ""],
     ["setup", "Generates a random setup", ""],
-    ["snp", "Search pucs by name\n\tExample: $searchPuc Araragi", "Search Puc"],
+    ["snp", "Search pucs by name\n\tExample: $snp -Araragi", "Search Puc"],
     ["puc", "Display info about a puc by using his number\n\tExample: $puc 2", ""],
     ["sse", 'Search 4-5 ema by skill\t\nExample: $searchSkillEma Size_Up', "Search ema skill"],
     ["ssp", 'Search pucs by skill\t\nExample: $searchSkillPuc Board_skill', "Search puc skill"],
@@ -128,14 +128,22 @@ async def on_message(message):
     elif message.content.startswith(commandF(2)):
         emaList4_5 = loadEmaList4_5()
         msg = ""
-        find = message.content.split()
-        if (len(find) != 2):
-            await channel.send(embed = error_embed())
+        ema_found = []
+        find = message.content.split("-")
+        if (len(find) != 2): embed_msg = error_embed(error="Wrong Format")
         else:
             for ema in emaList4_5["data"]:
                 if( find[1] in ema[0] ):
+                    ema_found = ema
+            if (len(ema_found)>1):
+                for ema in ema_found:
                     msg = msg + "\t%s - %s\n" % (ema[0], ema[2])
-            embed_msg = generic_embed("Ema found", msg, "", server_default_thumbnail)
+                embed_msg = generic_embed("Ema found", msg, "", server_default_thumbnail)
+            elif (len(ema_found)==1):
+                ema = ema_found[0]
+                embed_msg = generic_embed(ema[0], ema[3], ema[4], "")
+            else:
+                embed_msg = error_embed("No puc found with that name")
         await channel.send(embed = embed_msg)
     
     # $ema
@@ -208,7 +216,7 @@ async def on_message(message):
                 ]
                 embed_msg = field_embed(puc[1], puc[len(puc)-2], field, puc[len(puc)-1], server_default_thumbnail)
             else:
-                embed_msg = generic_embed("Puc not found", "No puc found with that name", "", server_default_thumbnail)
+                embed_msg = error_embed("No puc found with that name")
         await channel.send(embed=embed_msg)
 
     # $puc
