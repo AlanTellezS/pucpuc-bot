@@ -1,2 +1,2 @@
-worker: python bot.py
-worker: python -m discord -v
+worker: python -m pip install -U discord.py
+python bot.py
