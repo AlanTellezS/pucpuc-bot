@@ -133,7 +133,7 @@ async def on_message(message):
         if (len(find) != 2): embed_msg = error_embed(error="Wrong Format")
         else:
             for ema in emaList4_5["data"]:
-                if( find[1] in ema[0] ):
+                if( str.lower(find[1]) in str.lower(ema[0]) ):
                     ema_found.append(ema)
             if (len(ema_found)>1):
                 for ema in ema_found:
@@ -193,7 +193,7 @@ async def on_message(message):
         if (len(find)!=2): embed_msg = error_embed(error="Wrong format")
         else:
             for puc in pucs['data']:
-                if find[1] in puc[1]:
+                if str.lower(find[1]) in str.lower(puc[1]):
                     pucs_found.append(puc)
             if(len(pucs_found)>1):
                 for puc in pucs_found:
